@@ -1,7 +1,9 @@
-
-def index_error():
+#О бробіть виняток IndexError, коли програма намагається отримати доступ
+# до неправильного індексу в списку.
+def fun_index_error():
+    my_list = ["apple", "orange", "strawberry", "raspberry", "peach", "cherry"]
+    index_input = int(input("Enter the index you want to view: "))
     try:
-        my_list = [1, 2, 3]
-        print(my_list[5])  # Спроба доступу до неіснуючого індексу
+        print(my_list[index_input])  # Спроба доступу до неіснуючого індексу
     except IndexError:
-        print("Помилка: Неправильний індекс списку")
+        print("Error: Invalid list index!!!")
